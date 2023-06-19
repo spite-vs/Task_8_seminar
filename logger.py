@@ -73,20 +73,16 @@ def put_data():
                 data_first[number_journal + 1:]
         elif num_prop == 2:
             data_first = data_first[:number_journal] + [
-                f'{data_temp[0]}\n{surname_data()}\n{data_temp[2]}\n{data_temp[3]}\n'] + \
-                data_first[number_journal + 1:]
+                f'{data_temp[0]}\n{surname_data()}\n{data_temp[2]}\n{data_temp[3]}\n'] + data_first[number_journal + 1:]
         elif num_prop == 3:
             data_first = data_first[:number_journal] + [
-                f'{data_temp[0]}\n{data_temp[1]}\n{data_temp[2]}\n{phone_data()}\n'] + \
-                data_first[number_journal + 1:]
+                f'{data_temp[0]}\n{data_temp[1]}\n{data_temp[2]}\n{phone_data()}\n'] + data_first[number_journal + 1:]
         elif num_prop == 4:
             data_first = data_first[:number_journal] + [
-                f'{data_temp[0]}\n{data_temp[1]}\n{data_temp[2]}\n{address_data()}\n'] + \
-                data_first[number_journal + 1:]
+                f'{data_temp[0]}\n{data_temp[1]}\n{data_temp[2]}\n{address_data()}\n'] + data_first[number_journal + 1:]
         elif num_prop == 5:
             data_first = data_first[:number_journal] + [
-                f'{name_data()}\n{surname_data()}\n{phone_data()}\n{address_data()}\n'] + \
-                data_first[number_journal + 1:]
+                f'{name_data()}\n{surname_data()}\n{phone_data()}\n{address_data()}\n'] + data_first[number_journal + 1:]
 
         with open('data_first_variant.csv', 'w', encoding='utf-8') as file:
             file.write(''.join(data_first))
